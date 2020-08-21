@@ -1,0 +1,56 @@
+{
+  "name": "@capacitor/create-app",
+  "version": "3.0.0-alpha.0",
+  "description": "Create a new Capacitor project",
+  "author": "Ionic Team <hi@ionicframework.com>",
+  "homepage": "https://capacitorjs.com",
+  "engines": {
+    "node": ">=10.3.0"
+  },
+  "main": "./dist/index.js",
+  "bin": {
+    "create-capacitor-app": "./bin/create-capacitor-app"
+  },
+  "scripts": {
+    "pack-assets": "node ./scripts/pack-assets.mjs",
+    "build": "npm run clean && npm run pack-assets && tsc",
+    "clean": "rimraf ./dist",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "assets/app-template.tar.gz",
+    "bin/",
+    "dist/"
+  ],
+  "keywords": [
+    "capacitor",
+    "universal app",
+    "progressive web apps",
+    "cross platform"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/capacitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/capacitor/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "kleur": "^4.0.3",
+    "mustache": "^4.0.1",
+    "prompts": "^2.3.2",
+    "tar": "^6.0.2",
+    "tslib": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/mustache": "^4.0.1",
+    "@types/prompts": "^2.0.8",
+    "@types/tar": "^4.0.3",
+    "rimraf": "^3.0.2",
+    "typescript": "~3.8.3"
+  }
+}
