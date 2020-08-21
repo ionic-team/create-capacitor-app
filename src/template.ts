@@ -7,7 +7,6 @@ import { readFile, mkdir, writeFile } from './fs';
 import { OptionValues } from './options';
 
 const TEMPLATE_PATH = resolve(__dirname, '..', 'assets', 'app-template.tar.gz');
-const PKG_PATH = resolve(__dirname, '..', 'package.json');
 
 export const readPackageJson = async (p: string) => {
   const contents = await readFile(p, { encoding: 'utf8' });
@@ -27,11 +26,8 @@ export const extractTemplate = async (
 };
 
 export const applyTemplate = async (p: string) => {
-  const pkg = await readPackageJson(PKG_PATH);
   const contents = await readFile(p, { encoding: 'utf8' });
-  const result = Mustache.render(contents, {
-    CAPACITOR_VERSION: pkg.version,
-  });
+  const result = Mustache.render(contents, { CAPACITOR_VERSION: 'next' });
 
   await writeFile(p, result, { encoding: 'utf8' });
 };
