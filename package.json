@@ -13,6 +13,9 @@
   },
   "scripts": {
     "pack-assets": "node ./scripts/pack-assets.mjs",
+    "lint": "npm run prettier -- --check",
+    "fmt": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.{css,html,js,mjs,ts}\"",
     "build": "npm run clean && npm run pack-assets && tsc",
     "clean": "rimraf ./dist",
     "watch": "tsc -w",
@@ -37,6 +40,12 @@
     "url": "https://github.com/ionic-team/capacitor/issues"
   },
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "prettier": "@ionic/prettier-config",
   "dependencies": {
     "debug": "^4.1.1",
     "kleur": "^4.0.3",
@@ -50,6 +59,7 @@
     "@types/mustache": "^4.0.1",
     "@types/prompts": "^2.0.8",
     "@types/tar": "^4.0.3",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "typescript": "~3.8.3"
   }
