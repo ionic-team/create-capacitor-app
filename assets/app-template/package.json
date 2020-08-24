@@ -1,0 +1,21 @@
+{
+  "name": "capacitor-app",
+  "version": "1.0.0",
+  "description": "An Amazing Capacitor App",
+  "main": "index.js",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@capacitor/core": "{{ CAPACITOR_VERSION }}"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "{{ CAPACITOR_VERSION }}"
+  },
+  "author": "",
+  "license": "ISC"
+}
