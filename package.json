@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/create-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a new Capacitor project",
   "author": "Ionic Team <hi@ionicframework.com>",
   "homepage": "https://capacitorjs.com",
