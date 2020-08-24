@@ -2,6 +2,10 @@
 
 Create a minimal (no JS framework) Capacitor app.
 
+> ### :rotating_light: This tool is for Capacitor 3, which is in active development :rotating_light:
+>
+> To create minimal Capacitor 2 apps, use `npx @capacitor/cli create`. Follow Capacitor 3 development in [this issue](https://github.com/ionic-team/capacitor/issues/3133).
+
 ## Usage
 
 ```
