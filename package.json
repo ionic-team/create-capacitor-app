@@ -34,10 +34,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/capacitor.git"
+    "url": "git+https://github.com/ionic-team/create-capacitor-app.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/capacitor/issues"
+    "url": "https://github.com/ionic-team/create-capacitor-app/issues"
   },
   "license": "MIT",
   "husky": {
