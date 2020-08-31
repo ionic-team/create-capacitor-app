@@ -34,7 +34,7 @@ export const VALIDATORS: Validators = {
       : `Must be in reverse-DNS format, e.g. "com.example.app"`,
   dir: value =>
     typeof value !== 'string' || value.trim().length === 0
-      ? `Must provide a directory, e.g. "my-dir"`
+      ? `Must provide a directory, e.g. "my-app"`
       : true,
 };
 
