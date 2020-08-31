@@ -15,7 +15,7 @@ export interface OptionValues {
 }
 
 export type Validators = {
-  [K in keyof OptionValues]: (value: any) => string | true;
+  [K in keyof Required<OptionValues>]: (value: any) => string | true;
 };
 
 export const OPTIONS: (keyof OptionValues)[] = ['name', 'package-id', 'dir'];
