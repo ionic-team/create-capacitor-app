@@ -1,8 +1,8 @@
 import fs from 'fs';
-import util from 'util';
 import { resolve } from 'path';
+import util from 'util';
 
-import { OptionValues } from './options';
+import type { OptionValues } from './options';
 
 const writeFile = util.promisify(fs.writeFile);
 
@@ -10,7 +10,7 @@ export const createConfigFile = async ({
   name: appName,
   dir,
   'package-id': appId,
-}: OptionValues) => {
+}: OptionValues): Promise<void> => {
   const config = {
     appId,
     appName,

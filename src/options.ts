@@ -37,7 +37,7 @@ export const VALIDATORS: Validators = {
   dir: value =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide a directory, e.g. "my-app"`
-      : /^\-/.test(value)
+      : /^-/.test(value)
       ? 'Directories should not start with a hyphen.'
       : true,
 };

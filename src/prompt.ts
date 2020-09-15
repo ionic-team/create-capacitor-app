@@ -1,8 +1,9 @@
-import prompts from 'prompts';
-import kleur from 'kleur';
 import Debug from 'debug';
+import kleur from 'kleur';
+import prompts from 'prompts';
 
-import { VALIDATORS, OptionValues, Options } from './options';
+import type { OptionValues, Options } from './options';
+import { VALIDATORS } from './options';
 
 const debug = Debug('@capacitor/create-app:prompt');
 
