@@ -24,5 +24,5 @@ You can also try the following methods to use this package:
 
 ```
 --name <name> ............. Human-friendly app name
---package-id <id> ......... Unique app ID in reverse-DNS notation
+--app-id <id> ............. Unique app ID in reverse-DNS notation
 ```

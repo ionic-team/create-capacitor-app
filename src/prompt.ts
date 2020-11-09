@@ -31,16 +31,16 @@ export const gatherDetails = (
       },
       {
         type: 'text',
-        name: 'package-id',
+        name: 'app-id',
         message:
-          `What should be the Package ID for your app?\n\n` +
+          `What should be the App ID for your app?\n\n` +
           `${kleur.reset(
-            `    Package IDs (aka Bundle ID in iOS and Application ID in Android) are unique\n` +
+            `    App IDs (aka Bundle ID in iOS and Application ID in Android) are unique\n` +
               `    identifiers for apps. They must be in reverse domain name notation, generally\n` +
               `    representing a domain name that you or your company owns.\n`,
           )}\n`,
         initial: 'com.example.app',
-        validate: VALIDATORS['package-id'],
+        validate: VALIDATORS['app-id'],
         format: value => value.trim(),
       },
     ],

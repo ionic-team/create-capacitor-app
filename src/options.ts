@@ -11,7 +11,7 @@ export type Options = {
 export interface OptionValues {
   dir: string;
   name: string;
-  'package-id': string;
+  'app-id': string;
 }
 
 export type Validators = {
@@ -19,16 +19,16 @@ export type Validators = {
 };
 
 export const CLI_ARGS = ['dir'] as const;
-export const CLI_OPTIONS = ['name', 'package-id'] as const;
+export const CLI_OPTIONS = ['name', 'app-id'] as const;
 
 export const VALIDATORS: Validators = {
   name: value =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide an app name, e.g. "Spacebook"`
       : true,
-  'package-id': value =>
+  'app-id': value =>
     typeof value !== 'string' || value.trim().length === 0
-      ? 'Must provide a Package ID, e.g. "com.example.app"'
+      ? 'Must provide an App ID, e.g. "com.example.app"'
       : /[A-Z]/.test(value)
       ? 'Must be lowercase'
       : /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+$/.test(value)
