@@ -9,7 +9,7 @@ const writeFile = util.promisify(fs.writeFile);
 export const createConfigFile = async ({
   name: appName,
   dir,
-  'package-id': appId,
+  'app-id': appId,
 }: OptionValues): Promise<void> => {
   const config = {
     appId,
