@@ -11,7 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@capacitor/core": "{{ CAPACITOR_VERSION }}"
+    "@capacitor/core": "{{ CAPACITOR_VERSION }}",
+    "@capacitor/camera": "latest",
+    "@capacitor/splash-screen": "latest"
   },
   "devDependencies": {
     "@capacitor/cli": "{{ CAPACITOR_VERSION }}"
