@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/create-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create a new Capacitor project",
   "author": "Ionic Team <hi@ionicframework.com>",
   "homepage": "https://capacitorjs.com",
@@ -9,7 +9,7 @@
   },
   "main": "./dist/index.js",
   "bin": {
-    "create-capacitor-app": "./bin/create-capacitor-app"
+    "create-capacitor-app": "bin/create-capacitor-app"
   },
   "scripts": {
     "pack-assets": "node ./scripts/pack-assets.mjs",
