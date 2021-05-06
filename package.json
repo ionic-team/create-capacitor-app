@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/create-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create a new Capacitor project",
   "author": "Ionic Team <hi@ionicframework.com>",
   "homepage": "https://capacitorjs.com",
@@ -9,7 +9,7 @@
   },
   "main": "./dist/index.js",
   "bin": {
-    "create-capacitor-app": "./bin/create-capacitor-app"
+    "create-capacitor-app": "bin/create-capacitor-app"
   },
   "scripts": {
     "pack-assets": "node ./scripts/pack-assets.mjs",
@@ -20,7 +20,7 @@
     "build": "npm run clean && npm run pack-assets && tsc",
     "clean": "rimraf ./dist",
     "watch": "tsc -w",
-    "release": "np",
+    "release": "np --no-tests",
     "prepublishOnly": "npm run build"
   },
   "files": [
