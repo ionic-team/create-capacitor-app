@@ -5,7 +5,8 @@ import { resolve } from 'path';
 import { emoji, isTTY } from './cli';
 import { exists } from './fs';
 import * as help from './help';
-import { getOptions, OptionValues } from './options';
+import type { OptionValues } from './options';
+import { getOptions } from './options';
 import { gatherDetails } from './prompt';
 import { extractTemplate } from './template';
 
