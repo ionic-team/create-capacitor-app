@@ -5,7 +5,7 @@ import { resolve } from 'path';
 import { emoji, isTTY } from './cli';
 import { exists } from './fs';
 import * as help from './help';
-import { getOptions } from './options';
+import { getOptions, OptionValues } from './options';
 import { gatherDetails } from './prompt';
 import { extractTemplate } from './template';
 
@@ -39,7 +39,13 @@ export const run = async (): Promise<void> => {
     }
   }
 
-  const details = await gatherDetails(options);
+  let details: OptionValues;
+  if (options['app-id'] && options.name && options.dir) {
+    details = options as OptionValues;
+  } else {
+    details = await gatherDetails(options);
+  }
+
   const appdir = resolve(process.cwd(), details.dir);
 
   if (await exists(appdir)) {
