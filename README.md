@@ -9,16 +9,16 @@ Create a minimal (no JS framework) Capacitor app.
 ## Usage
 
 ```
-npm init @capacitor/app [<path>] [options]
+npm init @capacitor/app [<path>] -- [options]
 ```
 
 :memo: `npm init <pkg>` requires npm 6+
 
 You can also try the following methods to use this package:
 
-- `npx @capacitor/create-app`
-- `yarn create @capacitor/app`
-- `npm install -g @capacitor/create-app && create-capacitor-app`
+- `npx @capacitor/create-app [<path>] [options]`
+- `yarn create @capacitor/app [<path>] [options]`
+- `npm install -g @capacitor/create-app && create-capacitor-app [<path>] [options]`
 
 ### Options
 
