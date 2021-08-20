@@ -29,7 +29,7 @@ export const extractTemplate = async (
 
 export const applyTemplate = async (p: string): Promise<void> => {
   const contents = await readFile(p, { encoding: 'utf8' });
-  const result = Mustache.render(contents, { CAPACITOR_VERSION: 'next' });
+  const result = Mustache.render(contents, { CAPACITOR_VERSION: 'latest' });
 
   await writeFile(p, result, { encoding: 'utf8' });
 };
