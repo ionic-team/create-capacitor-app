@@ -1,6 +1,6 @@
 import '@capacitor/core';
 import { SplashScreen } from '@capacitor/splash-screen';
-import { Camera } from '@capacitor/camera'
+import { Camera } from '@capacitor/camera';
 
 window.customElements.define(
   'capacitor-welcome',
