@@ -8,5 +8,5 @@ and comes with a very minimal shell for building an app.
 To run the provided example, you can use [serve](https://www.npmjs.com/package/serve):
 
 ```bash
-npx serve
+npm run dev
 ```
