@@ -59,6 +59,6 @@ ${kleur.bold(`${tada} Your Capacitor app is ready to go! ${tada}`)}
 Next steps:
   - ${kleur.bold(`cd ${details.dir}/`)}
   - install dependencies (e.g. w/ ${kleur.bold('npm install')})
-  - ${kleur.bold('npx cap sync')}
+  - ${kleur.bold('npm run dev')}
 `);
 };
