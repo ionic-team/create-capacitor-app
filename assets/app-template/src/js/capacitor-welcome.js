@@ -70,10 +70,10 @@ window.customElements.define(
           <a target="_blank" href="http://ionicframework.com/">Ionic</a>?
         </p>
         <p>
-          Visit <a href="http://ionic-team.github.io/capacitor">ionic-team.github.io/capacitor</a> for information
+          Visit <a href="https://capacitorjs.com">capacitorjs.com</a> for information
           on using native features, building plugins, and more.
         </p>
-        <a href="http://ionic-team.github.io/capacitor" target="_blank" class="button">Read more</a>
+        <a href="https://capacitorjs.com" target="_blank" class="button">Read more</a>
         <h2>Tiny Demo</h2>
         <p>
           This demo shows how to call Capacitor plugins. Say cheese!
