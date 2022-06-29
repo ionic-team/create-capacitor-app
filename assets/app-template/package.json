@@ -8,7 +8,9 @@
     "mobile"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@capacitor/core": "{{ CAPACITOR_VERSION }}",
@@ -16,7 +18,8 @@
     "@capacitor/splash-screen": "latest"
   },
   "devDependencies": {
-    "@capacitor/cli": "{{ CAPACITOR_VERSION }}"
+    "@capacitor/cli": "{{ CAPACITOR_VERSION }}",
+    "vite": "^2.9.13"
   },
   "author": "",
   "license": "ISC"
