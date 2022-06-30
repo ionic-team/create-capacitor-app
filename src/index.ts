@@ -11,13 +11,13 @@ import { extractTemplate } from './template';
 
 const debug = Debug('@capacitor/create-app');
 
-process.on('unhandledRejection', error => {
+process.on('unhandledRejection', (error) => {
   process.stderr.write(`ERR: ${error}\n`);
   process.exit(1);
 });
 
 export const run = async (): Promise<void> => {
-  if (process.argv.find(arg => ['-h', '-?', '--help'].includes(arg))) {
+  if (process.argv.find((arg) => ['-h', '-?', '--help'].includes(arg))) {
     help.run();
     process.exit();
   }
@@ -31,9 +31,7 @@ export const run = async (): Promise<void> => {
     } else {
       process.stderr.write(
         `ERR: Refusing to prompt for missing/invalid options in non-TTY environment.\n` +
-          `See ${kleur.bold('--help')}. Run with ${kleur.bold(
-            '--verbose',
-          )} for more context.\n`,
+          `See ${kleur.bold('--help')}. Run with ${kleur.bold('--verbose')} for more context.\n`
       );
       process.exit(1);
     }
@@ -43,9 +41,7 @@ export const run = async (): Promise<void> => {
   const appdir = resolve(process.cwd(), details.dir);
 
   if (await exists(appdir)) {
-    process.stderr.write(
-      `ERR: Not overwriting existing directory: ${kleur.bold(details.dir)}`,
-    );
+    process.stderr.write(`ERR: Not overwriting existing directory: ${kleur.bold(details.dir)}`);
     process.exit(1);
   }
 
