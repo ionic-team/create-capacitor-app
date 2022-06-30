@@ -9,8 +9,8 @@ export type Options = {
 };
 
 export interface OptionValues {
-  dir: string;
-  name: string;
+  'dir': string;
+  'name': string;
   'app-id': string;
 }
 
@@ -22,7 +22,7 @@ export const CLI_ARGS = ['dir'] as const;
 export const CLI_OPTIONS = ['name', 'app-id'] as const;
 
 export const VALIDATORS: Validators = {
-  name: value =>
+  'name': value =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide an app name, e.g. "Spacebook"`
       : true,
@@ -34,7 +34,7 @@ export const VALIDATORS: Validators = {
       : /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+$/.test(value)
       ? true
       : `Must be in reverse-DNS format, e.g. "com.example.app"`,
-  dir: value =>
+  'dir': value =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide a directory, e.g. "my-app"`
       : /^-/.test(value)

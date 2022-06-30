@@ -7,7 +7,7 @@ import type { OptionValues } from './options';
 const writeFile = util.promisify(fs.writeFile);
 
 export const createConfigFile = async ({
-  name: appName,
+  'name': appName,
   dir,
   'app-id': appId,
 }: OptionValues): Promise<void> => {
