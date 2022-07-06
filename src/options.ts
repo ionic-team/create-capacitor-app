@@ -22,11 +22,9 @@ export const CLI_ARGS = ['dir'] as const;
 export const CLI_OPTIONS = ['name', 'app-id'] as const;
 
 export const VALIDATORS: Validators = {
-  name: value =>
-    typeof value !== 'string' || value.trim().length === 0
-      ? `Must provide an app name, e.g. "Spacebook"`
-      : true,
-  'app-id': value =>
+  name: (value) =>
+    typeof value !== 'string' || value.trim().length === 0 ? `Must provide an app name, e.g. "Spacebook"` : true,
+  'app-id': (value) =>
     typeof value !== 'string' || value.trim().length === 0
       ? 'Must provide an App ID, e.g. "com.example.app"'
       : /[A-Z]/.test(value)
@@ -34,7 +32,7 @@ export const VALIDATORS: Validators = {
       : /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+$/.test(value)
       ? true
       : `Must be in reverse-DNS format, e.g. "com.example.app"`,
-  dir: value =>
+  dir: (value) =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide a directory, e.g. "my-app"`
       : /^-/.test(value)
@@ -48,12 +46,7 @@ export const getOptions = (): Options => {
     const validatorResult = VALIDATORS[option](value);
 
     if (typeof validatorResult === 'string') {
-      debug(
-        `invalid positional arg: %s %O: %s`,
-        option,
-        value,
-        validatorResult,
-      );
+      debug(`invalid positional arg: %s %O: %s`, option, value, validatorResult);
     }
 
     opts[option] = validatorResult === true ? value : undefined;
