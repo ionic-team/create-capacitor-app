@@ -5,8 +5,18 @@ and comes with a very minimal shell for building an app.
 
 ### Running this example
 
-To run the provided example, you can use [serve](https://www.npmjs.com/package/serve):
-
 ```bash
 npm start
+```
+
+### Building this example
+
+```bash
+npm run build
+```
+
+To see the built app in `dist/`, you can use [serve](https://www.npmjs.com/package/serve).
+
+```bash
+npx serve dist/
 ```
