@@ -52,7 +52,7 @@ declare module 'tar' {
     addEventHandler(event: 'data', listener: (chunk: unknown) => void): this;
     addEventHandler(
       event: 'readable' | 'drain' | 'resume' | 'end' | 'prefinish' | 'finish' | 'close',
-      listener: () => void
+      listener: () => void,
     ): this;
 
     on(event: string, listener: (...args: unknown[]) => void): this;
@@ -67,21 +67,21 @@ declare module 'tar' {
     prependListener(event: 'data', listener: (chunk: unknown) => void): this;
     prependListener(
       event: 'readable' | 'drain' | 'resume' | 'end' | 'prefinish' | 'finish' | 'close',
-      listener: () => void
+      listener: () => void,
     ): this;
 
     prependOnceListener(event: string, listener: (...args: unknown[]) => void): this;
     prependOnceListener(event: 'data', listener: (chunk: unknown) => void): this;
     prependOnceListener(
       event: 'readable' | 'drain' | 'resume' | 'end' | 'prefinish' | 'finish' | 'close',
-      listener: () => void
+      listener: () => void,
     ): this;
 
     removeListener(event: string, listener: (...args: unknown[]) => void): this;
     removeListener(event: 'data', listener: (chunk: unknown) => void): this;
     removeListener(
       event: 'readable' | 'drain' | 'resume' | 'end' | 'prefinish' | 'finish' | 'close',
-      listener: () => void
+      listener: () => void,
     ): this;
 
     emit(event: string, ...args: unknown[]): boolean;
@@ -762,7 +762,7 @@ declare module 'tar' {
   export function create(
     options: CreateOptions,
     fileList: readonly string[],
-    callback?: (err?: Error) => void
+    callback?: (err?: Error) => void,
   ): stream.Readable;
 
   /**
@@ -776,7 +776,7 @@ declare module 'tar' {
   export function create(
     options: CreateOptions & FileOptions,
     fileList: readonly string[],
-    callback: (err?: Error) => void
+    callback: (err?: Error) => void,
   ): void;
 
   /**
@@ -799,7 +799,7 @@ declare module 'tar' {
   export function extract(
     options: ExtractOptions,
     fileList?: readonly string[],
-    callback?: (err?: Error) => void
+    callback?: (err?: Error) => void,
   ): stream.Writable;
 
   /**
@@ -817,7 +817,7 @@ declare module 'tar' {
   export function extract(
     options: ExtractOptions & FileOptions,
     fileList: readonly string[] | undefined,
-    callback: (err?: Error) => void
+    callback: (err?: Error) => void,
   ): void;
 
   /**
@@ -836,7 +836,7 @@ declare module 'tar' {
   export function list(
     options?: ListOptions & FileOptions,
     fileList?: readonly string[],
-    callback?: (err?: Error) => void
+    callback?: (err?: Error) => void,
   ): stream.Writable;
 
   /**
@@ -865,7 +865,7 @@ declare module 'tar' {
   export function replace(
     options: ReplaceOptions,
     fileList: readonly string[] | undefined,
-    callback: (err?: Error) => void
+    callback: (err?: Error) => void,
   ): Promise<void>;
 
   /**
@@ -884,7 +884,7 @@ declare module 'tar' {
   export function update(
     options: ReplaceOptions,
     fileList: readonly string[] | undefined,
-    callback: (err?: Error) => void
+    callback: (err?: Error) => void,
   ): Promise<void>;
 
   /**

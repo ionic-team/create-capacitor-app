@@ -28,16 +28,16 @@ export const VALIDATORS: Validators = {
     typeof value !== 'string' || value.trim().length === 0
       ? 'Must provide an App ID, e.g. "com.example.app"'
       : /[A-Z]/.test(value)
-      ? 'Must be lowercase'
-      : /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+$/.test(value)
-      ? true
-      : `Must be in reverse-DNS format, e.g. "com.example.app"`,
+        ? 'Must be lowercase'
+        : /^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+$/.test(value)
+          ? true
+          : `Must be in reverse-DNS format, e.g. "com.example.app"`,
   dir: (value) =>
     typeof value !== 'string' || value.trim().length === 0
       ? `Must provide a directory, e.g. "my-app"`
       : /^-/.test(value)
-      ? 'Directories should not start with a hyphen.'
-      : true,
+        ? 'Directories should not start with a hyphen.'
+        : true,
 };
 
 export const getOptions = (): Options => {

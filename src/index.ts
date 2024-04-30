@@ -31,7 +31,7 @@ export const run = async (): Promise<void> => {
     } else {
       process.stderr.write(
         `ERR: Refusing to prompt for missing/invalid options in non-TTY environment.\n` +
-          `See ${kleur.bold('--help')}. Run with ${kleur.bold('--verbose')} for more context.\n`
+          `See ${kleur.bold('--help')}. Run with ${kleur.bold('--verbose')} for more context.\n`,
       );
       process.exit(1);
     }

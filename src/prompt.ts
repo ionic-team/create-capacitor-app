@@ -35,7 +35,7 @@ export const gatherDetails = (initialOptions: Options): Promise<OptionValues> =>
           `${kleur.reset(
             `    App IDs (aka Bundle ID in iOS and Application ID in Android) are unique\n` +
               `    identifiers for apps. They must be in reverse domain name notation, generally\n` +
-              `    representing a domain name that you or your company owns.\n`
+              `    representing a domain name that you or your company owns.\n`,
           )}\n`,
         initial: 'com.example.app',
         validate: VALIDATORS['app-id'],
@@ -47,6 +47,6 @@ export const gatherDetails = (initialOptions: Options): Promise<OptionValues> =>
         debug('Prompt cancelled by user.');
         process.exit(1);
       },
-    }
+    },
   );
 };
