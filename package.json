@@ -42,11 +42,6 @@
     "url": "https://github.com/ionic-team/create-capacitor-app/issues"
   },
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "prettier": "@ionic/prettier-config",
   "eslintConfig": {
     "extends": "@ionic/eslint-config/recommended"
@@ -66,7 +61,6 @@
     "@types/mustache": "^4.2.5",
     "@types/prompts": "^2.4.9",
     "eslint": "^7.32.0",
-    "husky": "^4.2.5",
     "np": "^10.0.5",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
