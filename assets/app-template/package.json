@@ -2,7 +2,7 @@
   "name": "capacitor-app",
   "version": "1.0.0",
   "description": "An Amazing Capacitor App",
-  "main": "index.js",
+  "type": "module",
   "keywords": [
     "capacitor",
     "mobile"
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "{{ CAPACITOR_VERSION }}",
-    "vite": "^2.9.13"
+    "vite": "^5.4.2"
   },
   "author": "",
   "license": "ISC"
