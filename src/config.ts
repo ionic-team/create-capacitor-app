@@ -13,7 +13,7 @@ export const createConfigFile = async ({ name: appName, dir, 'app-id': appId }: 
     webDir: 'dist',
     plugins: {
       SplashScreen: {
-        launchShowDuration: 0,
+        launchAutoHide: false,
       },
     },
   };
