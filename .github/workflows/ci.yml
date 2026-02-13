@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20.x
-      - uses: actions/checkout@v4
+          node-version: 22.x
+      - uses: actions/checkout@v6
       - name: Restore Dependency Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.OS }}-dependency-cache-${{ hashFiles('**/package.json') }}
@@ -30,12 +30,12 @@ jobs:
     needs:
       - lint
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20.x
-      - uses: actions/checkout@v4
+          node-version: 22.x
+      - uses: actions/checkout@v6
       - name: Restore Dependency Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.OS }}-dependency-cache-${{ hashFiles('**/package.json') }}
