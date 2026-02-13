@@ -1,4 +1,4 @@
-import tar from 'tar';
+import { create } from 'tar';
 import { resolve } from 'path';
 
 import { execute } from './lib/cli.mjs';
@@ -9,7 +9,7 @@ execute(async () => {
   const template = resolve(assetsdir, 'app-template');
   const dest = resolve(assetsdir, 'app-template.tar.gz');
 
-  await tar.create({ gzip: true, file: dest, cwd: template }, ['.']);
+  await create({ gzip: true, file: dest, cwd: template }, ['.']);
 
   console.log(`Assets copied to ${dest}!`);
 });

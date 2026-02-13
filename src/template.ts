@@ -1,6 +1,6 @@
 import Mustache from 'mustache';
 import { resolve } from 'path';
-import tar from 'tar';
+import { extract } from 'tar';
 
 import { createConfigFile } from './config';
 import { readFile, mkdir, writeFile } from './fs';
@@ -15,7 +15,7 @@ export const readPackageJson = async (p: string): Promise<{ [key: string]: any }
 
 export const extractTemplate = async (appdir: string, details: OptionValues): Promise<void> => {
   await mkdir(appdir, { recursive: true });
-  await tar.extract({ file: TEMPLATE_PATH, cwd: appdir });
+  await extract({ file: TEMPLATE_PATH, cwd: appdir });
   await createConfigFile(details);
   await Promise.all(['package.json'].map((p) => resolve(appdir, p)).map((p) => applyTemplate(p)));
 };
