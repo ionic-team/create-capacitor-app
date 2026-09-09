@@ -8,8 +8,8 @@
 
 declare module 'tar' {
   import { EventEmitter } from 'events';
-  import stream = require('stream');
-  import zlib = require('zlib');
+  import type * as stream from 'stream';
+  import type * as zlib from 'zlib';
 
   namespace MiniPass {
     interface Options {
@@ -290,7 +290,6 @@ declare module 'tar' {
     on(event: 'entry', listener: (entry: ReadEntry) => void): this;
   }
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   export const Parse: {
     new (opt?: ParseOptions): Parse;
   };
@@ -303,7 +302,7 @@ declare module 'tar' {
    * This only works with directories, it does not work with individual files.
    * The optional properties object are used to set properties in the tar 'Global Extended Header'.
    */
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+
   export function Pack(props?: HeaderProperties): PackStream;
 
   /**
@@ -317,7 +316,7 @@ declare module 'tar' {
    * ```
    * options also get passed to the fstream.Writer instance that tar uses internally.
    */
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+
   export function Extract(opts: ExtractOptions | string): ParseStream;
 
   export interface FileStat extends stream.Readable, Fields {
