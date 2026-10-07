@@ -9,7 +9,7 @@ export const writeFile = util.promisify(fs.writeFile);
 export const exists = async (p: string): Promise<boolean> => {
   try {
     await access(p);
-  } catch (e) {
+  } catch {
     return false;
   }
 
